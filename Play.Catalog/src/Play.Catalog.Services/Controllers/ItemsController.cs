@@ -32,7 +32,7 @@ namespace Play.Catalog.Service.Controllers
         [HttpPost]
         public ActionResult<ItemDto> Post(CreateItemDto createItemDto)
         {
-            // TODO: What to do when item is bad formatted, with bad values?
+            
             var item = new ItemDto(Guid.NewGuid(), createItemDto.Name, createItemDto.Description, createItemDto.Price, DateTimeOffset.UtcNow);
             items.Add(item);
             return CreatedAtAction(nameof(GetById), new { id = item.Id}, item);
@@ -65,7 +65,7 @@ namespace Play.Catalog.Service.Controllers
             if (index < 0)
                 return NotFound();
             items.RemoveAt(index);
-            return NoContent(); 
+            return NoContent();
         }
     }
 }
