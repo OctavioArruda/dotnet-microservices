@@ -21,10 +21,12 @@ namespace Play.Catalog.Service.Controllers
         }
 
         [HttpGet("{id}")]
-        public ItemDto? GetById(Guid id)
+        public ActionResult<ItemDto> GetById(Guid id)
         {
-            // TODO: Refactor to throw HttpNotFoundException() when item not found
-            return items.SingleOrDefault(item => item.Id == id);
+            var item =  items.SingleOrDefault(item => item.Id == id);
+            if (item is null)
+                return NotFound();
+            return item;
         }
 
         [HttpPost]
@@ -41,7 +43,8 @@ namespace Play.Catalog.Service.Controllers
         {
             var itemToUpdate = items.SingleOrDefault(item => item.Id == id);
             
-            // TODO: Path when itemToUpdate is null
+            if (itemToUpdate is null)
+                return NotFound();
 
             var updatedItem = itemToUpdate with 
             {
@@ -52,7 +55,6 @@ namespace Play.Catalog.Service.Controllers
 
             var index = items.FindIndex(existingItem => existingItem.Id == id);
             items[index] = updatedItem;
-
             return NoContent();
         }
 
@@ -60,7 +62,8 @@ namespace Play.Catalog.Service.Controllers
         public IActionResult Delete(Guid id)
         {
             var index = items.FindIndex(existingItem => existingItem.Id == id);
-            // TODO: Throw HttpNotFoundException() when not finding the item
+            if (index < 0)
+                return NotFound();
             items.RemoveAt(index);
             return NoContent(); 
         }
