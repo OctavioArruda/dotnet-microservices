@@ -41,3 +41,5 @@ C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debu
 C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Projects\dotnet-microservices\Play.Catalog\src\Play.Catalog.Services\bin\Debug\net6.0\Play.Common.dll

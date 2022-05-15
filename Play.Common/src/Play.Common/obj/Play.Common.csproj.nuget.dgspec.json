@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\dotnet-microservices\\Play.Catalog\\src\\Play.Catalog.Services\\Play.Catalog.Services.csproj": {}
+    "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\Play.Common.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\dotnet-microservices\\Play.Catalog\\src\\Play.Catalog.Services\\Play.Catalog.Services.csproj": {
+    "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\Play.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\dotnet-microservices\\Play.Catalog\\src\\Play.Catalog.Services\\Play.Catalog.Services.csproj",
-        "projectName": "Play.Catalog.Services",
-        "projectPath": "C:\\Projects\\dotnet-microservices\\Play.Catalog\\src\\Play.Catalog.Services\\Play.Catalog.Services.csproj",
+        "projectUniqueName": "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
+        "projectName": "Play.Common",
+        "projectPath": "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
         "packagesPath": "C:\\Users\\OctavioArruda\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\dotnet-microservices\\Play.Catalog\\src\\Play.Catalog.Services\\obj\\",
+        "outputPath": "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OctavioArruda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projects\\dotnet-microservices": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,13 +40,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Play.Common": {
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[6.0.1, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.1, )"
             }
           },
           "imports": [
@@ -61,9 +68,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
