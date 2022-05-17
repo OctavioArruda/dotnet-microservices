@@ -56,7 +56,7 @@ namespace Play.Catalog.Service.Controllers
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id}, item);
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Put(Guid id, UpdateItemDto updateItemDto)
         {
             var itemToUpdate = await itemsRepository.GetAsync(id);
