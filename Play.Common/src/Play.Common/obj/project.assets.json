@@ -1567,7 +1567,7 @@
     "C:\\Users\\OctavioArruda\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "C:\\Projects\\dotnet-microservices\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
       "projectName": "Play.Common",
