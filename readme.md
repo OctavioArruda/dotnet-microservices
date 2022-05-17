@@ -37,3 +37,10 @@
 
 ### packages
 - Contains the nuget packages for the project
+
+
+## How to build the project
+- *Requires Docker*
+- Inside Play.Infra dir, run `docker-compose up` or `docker-compose up -d` for less information on terminal
+- Inside Play.Catalog/src/Play.Catalog.Services, run `dotnet restore` then `dotnet run`
+- Inside Play.Inventory/src/Play.Inventory.Services, run `dotnet restore`, then `dotnet run`
