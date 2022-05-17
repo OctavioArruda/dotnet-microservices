@@ -8,6 +8,8 @@
 - Docker (mongo db, rabbitmq)
 - docker-compose
 - RabbitMQ
+  - Concept of _publisher_ and _consumer_ for message broker
+  - Advanced Message Queuing Protocol(AMQP)
 - .NET 6
 - dotnet records
 - Circuit breaker pattern on microservices
