@@ -3,7 +3,6 @@ using MongoDB.Driver;
 
 namespace Play.Common.MongoDB
 {
-
     public class MongoRepository<T> : IRepository<T> where T : IEntity
     {
         private readonly IMongoCollection<T> dbCollection;
