@@ -20,6 +20,10 @@ builder.Services.AddHttpClient<CatalogClient>(client =>
     retryCount: 5,
     sleepDurationProvider: retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)) + TimeSpan.FromMilliseconds(jitterer.Next(0, 1000))
 ))
+  .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().CircuitBreakerAsync(
+      handledEventsAllowedBeforeBreaking: 3,
+      durationOfBreak: TimeSpan.FromSeconds(15)
+  ))
   .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(1));
 
 builder.Services.AddControllers();
